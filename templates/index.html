@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Say Hello</title>
+        <link href="https://fonts.googleapis.com/css2?family=Shanti&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/static/css/main.css">
+        
+    </head>
+    <body>
+        <img src="/static/logo.png" alt="hello logo">
+        <br>
+        <form action="greet" method="post">
+            {% for message in get_flashed_messages()%}
+                <p>{{message}}</p>
+            {% endfor %}
+            <br>
+            <input type="text" name="name_input">
+            <br>
+            <input type="submit" value="GREETINGS" id="greet">
+
+        </form>
+    </body>
+</html>
