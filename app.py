@@ -13,4 +13,3 @@ def greet():
     request.form["name_input"]
     flash("Hello " + str(request.form["name_input"]) + ", great to see you again! ")
     return render_template('index.html')
-app.run(debug=True)
